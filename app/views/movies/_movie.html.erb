@@ -1,0 +1,9 @@
+<div id="<%= dom_id movie %>">
+    <th scope="row"><%= movie.id %></th>
+    <td><%= movie.name %></td>
+    <% if movie.client != nil %>
+        <td><%= movie.client.name %></td>
+    <% else %>
+        <td>has not rented yet</td>
+    <% end %>
+</div>

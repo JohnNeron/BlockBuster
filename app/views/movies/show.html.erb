@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+<table class="table mt-5">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Cliente</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @movie %>
+   </tbody>
+  </table>
+<div class="my-5">
+  <%= link_to "Edit this movie", edit_movie_path(@movie), class:"btn button3" %> |
+  <%= link_to "Back to movies", movies_path, class:"btn button3" %>
+
+  <%= button_to "Destroy this movie", @movie, method: :delete, class:"btn button3 mt-3" %>
+</div>

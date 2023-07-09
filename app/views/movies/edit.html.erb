@@ -1,0 +1,10 @@
+<h1>Editing movie</h1>
+
+<%= render "form", movie: @movie %>
+
+<br>
+
+<div class="d-flex justify-content-center">
+  <%= link_to "Show this movie", @movie, class:"mx-3 mb-3 btn button3" %>
+  <%= link_to "Back to movies", movies_path, class:"mx-3 mb-3 btn button3" %>
+</div>

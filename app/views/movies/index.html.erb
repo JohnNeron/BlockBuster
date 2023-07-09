@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+<h1>Movies</h1>
+<div id="movies">
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Client</th>
+        <th scope="col">See More Info</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <% @movies.each do |movie| %>
+        <tr>
+          <%= render movie %>
+           <td><%= link_to "Show this Movie", movie, class:"btn" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <p>
+    <%= link_to "New Movie", new_movie_path, class:"submit button3" %>
+  </p>
+</div>
